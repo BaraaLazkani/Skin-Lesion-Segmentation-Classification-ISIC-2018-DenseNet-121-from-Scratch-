@@ -2,7 +2,6 @@
 
 An end-to-end computer-aided diagnosis pipeline for the **ISIC 2018 Task 3** dermoscopy benchmark: hair removal and enhancement, Fuzzy C-Means lesion segmentation, and a **DenseNet-121 classifier implemented entirely from scratch in NumPy** (no PyTorch/TensorFlow/Keras/JAX) across seven diagnostic classes.
 
-By **Baraa Lazkani** and **Modar Ibrahim**.
 
 ## Motivation
 
