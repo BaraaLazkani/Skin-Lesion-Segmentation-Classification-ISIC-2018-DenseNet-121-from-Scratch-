@@ -1,0 +1,86 @@
+{
+  "per_class": {
+    "MEL": {
+      "accuracy": 0.9841,
+      "precision": 0.8991,
+      "recall": 0.8829,
+      "specificity": 0.9921,
+      "f1": 0.8909,
+      "dice": 0.8909,
+      "jaccard": 0.8033,
+      "auc_roc": 0.9681
+    },
+    "NV": {
+      "accuracy": 0.9689,
+      "precision": 0.9727,
+      "recall": 0.9738,
+      "specificity": 0.9621,
+      "f1": 0.9732,
+      "dice": 0.9732,
+      "jaccard": 0.9479,
+      "auc_roc": 0.982
+    },
+    "BCC": {
+      "accuracy": 0.9881,
+      "precision": 0.9048,
+      "recall": 0.9223,
+      "specificity": 0.9929,
+      "f1": 0.9135,
+      "dice": 0.9135,
+      "jaccard": 0.8407,
+      "auc_roc": 0.9754
+    },
+    "AKIEC": {
+      "accuracy": 0.9835,
+      "precision": 0.8738,
+      "recall": 0.8824,
+      "specificity": 0.9908,
+      "f1": 0.878,
+      "dice": 0.878,
+      "jaccard": 0.7826,
+      "auc_roc": 0.9612
+    },
+    "BKL": {
+      "accuracy": 0.9709,
+      "precision": 0.9087,
+      "recall": 0.8924,
+      "specificity": 0.9845,
+      "f1": 0.9005,
+      "dice": 0.9005,
+      "jaccard": 0.8189,
+      "auc_roc": 0.9643
+    },
+    "DF": {
+      "accuracy": 0.9894,
+      "precision": 0.8769,
+      "recall": 0.8769,
+      "specificity": 0.9945,
+      "f1": 0.8769,
+      "dice": 0.8769,
+      "jaccard": 0.7808,
+      "auc_roc": 0.9701
+    },
+    "VASC": {
+      "accuracy": 0.996,
+      "precision": 0.875,
+      "recall": 0.9333,
+      "specificity": 0.9973,
+      "f1": 0.9032,
+      "dice": 0.9032,
+      "jaccard": 0.8235,
+      "auc_roc": 0.9889
+    }
+  },
+  "macro": {
+    "accuracy": 0.9405,
+    "precision": 0.9016,
+    "recall": 0.9091,
+    "specificity": 0.9877,
+    "f1": 0.9052,
+    "dice": 0.9052,
+    "jaccard": 0.8283,
+    "auc_roc": 0.9729
+  },
+  "val_loss": 0.1718,
+  "best_epoch": 34
+}
