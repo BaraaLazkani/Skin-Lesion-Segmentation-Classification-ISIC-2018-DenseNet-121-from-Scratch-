@@ -1,0 +1,58 @@
+seed: 42
+device: cuda  # falls back to cpu automatically if cuda is unavailable
+
+data:
+  train_csv: "../Dara Preprocessing & Segmentation/results/ISIC2018_Task3_Training_GroundTruth.csv"
+  val_csv:   "../Dara Preprocessing & Segmentation/results/ISIC2018_Task3_Test_GroundTruth.csv"
+  train_images_dir: "../Dara Preprocessing & Segmentation/results/images/training"
+  val_images_dir:   "../Dara Preprocessing & Segmentation/results/images/testing"
+  train_image_suffix: "_segmented.jpg"
+  val_image_suffix: "_Test_Segmented.jpg"
+  image_size: 224
+  num_workers: 4
+  classes:
+    - MEL
+    - NV
+    - BCC
+    - AKIEC
+    - BKL
+    - DF
+    - VASC
+
+model:
+  architecture: densenet121
+  pretrained: false
+  dropout: 0.6  # increased from 0.5 — 7M params on 8900 images needs heavy regularization
+
+training:
+  epochs: 60
+  batch_size: 32
+  optimizer: adam
+  weight_decay: 0.001
+
+  # Phase 1: backbone frozen, only classifier head trains (fast convergence, no feature destruction)
+  freeze_backbone_epochs: 8
+  learning_rate: 0.001        # higher LR is fine — only ~1024 params in the head are updating
+
+  # Phase 2: full fine-tuning after backbone unfreezes
+  learning_rate_finetune: 0.00003  # very low — fine-tuning all layers after warm-up needs careful LR
+  warmup_epochs: 0            # frozen phase serves this purpose
+
+  scheduler: cosine           # applied during phase 2 only
+  loss: focal
+  focal_gamma: 2.0
+  use_weighted_sampler: true
+  augmentation:
+    horizontal_flip: 0.5
+    vertical_flip: 0.5
+    rotation_deg: 30
+    color_jitter: 0.2
+  early_stopping:
+    patience: 12              # slightly more patience to let phase 2 breathe
+    min_delta: 0.0005
+    monitor: val_macro_f1
+
+logging:
+  log_dir: "logs"
+  log_every_n_batches: 10
+  save_best_metric: val_macro_f1
