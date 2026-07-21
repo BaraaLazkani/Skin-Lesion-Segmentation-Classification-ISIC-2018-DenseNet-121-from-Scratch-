@@ -1,0 +1,23 @@
+# Editor / OS
+.vscode/
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# LaTeX build artifacts
+documentation.aux
+documentation.out
+documentation.toc
+documentation.synctex.gz
