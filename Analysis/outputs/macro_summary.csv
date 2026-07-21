@@ -1,0 +1,2 @@
+,Accuracy,Precision,Recall,Specificity,F1,Dice,Jaccard,AUC-ROC
+Macro,0.9405,0.9016,0.9091,0.9877,0.9052,0.9052,0.8283,0.9729

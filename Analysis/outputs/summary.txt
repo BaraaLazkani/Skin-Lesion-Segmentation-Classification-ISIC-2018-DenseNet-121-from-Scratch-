@@ -1,0 +1,27 @@
+==================================================
+CLASS PERFORMANCE SUMMARY
+==================================================
+Metric used for ranking: F1
+
+Ranked classes (best to worst):
+  1. NV       F1=0.9732 <- BEST
+  2. BCC      F1=0.9135
+  3. VASC     F1=0.9032
+  4. BKL      F1=0.9005
+  5. MEL      F1=0.8909
+  6. AKIEC    F1=0.8780
+  7. DF       F1=0.8769 <- WORST
+
+Best class:  NV (F1=0.9732)
+Worst class: DF (F1=0.8769)
+
+All macro averages:
+  accuracy        0.9405
+  precision       0.9016
+  recall          0.9091
+  specificity     0.9877
+  f1              0.9052
+  dice            0.9052
+  jaccard         0.8283
+  auc_roc         0.9729
+==================================================
