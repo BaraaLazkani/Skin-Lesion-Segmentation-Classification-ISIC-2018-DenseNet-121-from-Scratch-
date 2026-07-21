@@ -1,0 +1,5 @@
+{
+  "pythonPath": "D:/Regional-Scale-AOD-Estimation/venv/Scripts/python.exe",
+  "extraPaths": ["src"],
+  "typeCheckingMode": "basic"
+}
