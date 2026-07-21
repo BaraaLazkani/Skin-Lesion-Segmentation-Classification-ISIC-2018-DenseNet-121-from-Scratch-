@@ -1,0 +1,8 @@
+# Paths to artifacts written by the training stage — no model inference here
+metrics_csv:        "../Training and Validation/logs/metrics.csv"
+best_metrics_json:  "../Training and Validation/logs/best_metrics.json"
+final_metrics_json: "../Training and Validation/logs/final_metrics.json"
+best_confusion_npy: "../Training and Validation/logs/best_confusion_matrix.npy"
+training_config:    "../Training and Validation/configs/config.yaml"
+
+output_dir: "outputs"
